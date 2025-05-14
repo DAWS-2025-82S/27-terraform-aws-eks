@@ -18,3 +18,7 @@ resource "aws_instance" "this" {
     }
   )
 }
+
+output "Bastion_Public_IP" {
+  value       = aws_instance.this.public_ip
+}
